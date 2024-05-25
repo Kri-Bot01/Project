@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Company Product</title>
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #000000;
+            color: #48e756;
+            padding: 10px;
+            text-align: center;
+            font-size: large;
+        }
+        .nav {
+            background-color: #48e756;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav a {
+            color: #000000;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            color: #ccc;
+        }
+        .product-description, .about-company, .contact-us {
+            display: none;
+            padding: 20px;
+        }
+        .product-description h1, .about-company h2, .contact-us h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .product-description p, .about-company p, .contact-us p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        .product-price {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .cart-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .footer {
+            background-color: #000000;
+            color: #48e756;
+            padding: 10px;
+            text-align: center;
+            clear: both;
+        }
+        .circle {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+        }
+        div {
+            display: flex;
+            align-items: center; /* vertical alignment */
+            justify-content: center; /* horizontal alignment */
+        }
+
+    </style>
+    <script>
+        function toggleSection(sectionId) {
+            const sections = document.getElementsByClassName('section');
+            for (const section of sections) {
+                section.style.display = 'none';
+            }
+            const sectionToShow = document.getElementById(sectionId);
+            sectionToShow.style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1 id="abc">Celvi  </h1>
+        <img class ="circle" id="celvi" src="C:\Users\Krishiv\Desktop\celvi.jpg" alt="image">
+        <img class="circle" id="anonymous" src="C:\Users\Krishiv\Desktop\anonymous.png" alt="'image" style="float: right;">
+    </div>
+    <div class="nav">
+        <a href="#" onclick="toggleSection('about-company'); return false;">About Us</a>
+        <a href="#" onclick="toggleSection('product-description'); return false;">Product</a>
+        <a href="#" onclick="toggleSection('contact-us'); return false;">Contact Us</a>
+    </div>
+    <div class="product-description section" id="product-description">
+        <h1>Product Name</h1>
+        <p>Name</p>
+        <span class="product-price">price</span>
+        <a href="#" class="cart-btn">Add to Cart</a>
+    </div>
+    <div class="about-company section" id="about-company">
+        <h2>About Our Company</h2>
+        <p>about</p>
+    </div>
+    <div class="contact-us section" id="contact-us">
+        <h2>Contact Us</h2>
+        <p>Have a question or comment? We'd love to hear from you!</p>
+        <p><a href="mailto:info@company.com">info@company.com</a></p>
+        <p>Number</p>
+        <p>adress</p>
+    </div>
+    <div class="footer">
+        <p>&copy; 2023 Company Name. All rights reserved.</p>
+    </div>
+</body>
+</html>
